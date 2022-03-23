@@ -1,0 +1,12 @@
+[Unit]
+Description=First boot script to configure Arch Linux.
+After=network.target
+
+[Service]
+ExecStartPre=/bin/sleep 10
+Type=simple
+ExecStart=/usr/bin/env bash /root/arch-linux-config.sh
+TimeoutStartSec=0
+
+[Install]
+WantedBy=default.target
